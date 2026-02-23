@@ -13,7 +13,7 @@ Pure legal-move generation · Drag-and-drop input · Animated pieces · Particle
 
 <br>
 
-![Gameplay screenshot](docs/images/gameplay.png)
+![Gameplay screenshot](docs/images/gameplay.png){size=50%}
 
 </div>
 
