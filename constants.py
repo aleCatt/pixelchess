@@ -1,0 +1,80 @@
+from chess.pieces import Pawn, Rook, Knight, Bishop, Queen, King
+
+# Sprite / tile geometry
+BASE_SPRITE_SIZE = 16
+SPRITE_HEIGHT    = 32
+SCALE            = 8
+UNIT             = SCALE
+
+TILE_W = BASE_SPRITE_SIZE * SCALE           # 96 px
+TILE_H = int(BASE_SPRITE_SIZE * SCALE * 0.75)  # 72 px
+
+PIECE_WIDTH  = TILE_W
+PIECE_HEIGHT = SPRITE_HEIGHT * SCALE        # 256 px
+
+BOARD_W = TILE_W * 8
+BOARD_H = TILE_H * 8
+
+# Window borders
+BORDER_TOP    = TILE_W
+BORDER_SIDE   = TILE_W
+BORDER_BOTTOM = 2 * TILE_W
+
+BOARD_ORIGIN_X = BORDER_SIDE
+BOARD_ORIGIN_Y = BORDER_TOP
+
+WINDOW_WIDTH  = BOARD_W + BORDER_SIDE * 2
+WINDOW_HEIGHT = BORDER_TOP + BOARD_H + BORDER_BOTTOM
+
+PIECE_Y_OFFSET = TILE_H - PIECE_HEIGHT
+
+# Colours
+COLOR_LIGHT_SQUARE  = (0xE8, 0xD5, 0xB7)
+COLOR_DARK_SQUARE   = (0x6B, 0x3F, 0x27)
+COLOR_HIGHLIGHT     = (0xFF, 0xF0, 0x00)
+COLOR_LEGAL_MOVE    = (0x30, 0xFF, 0x60)
+COLOR_LEGAL_CAPTURE = (0xFF, 0x50, 0x10)
+COLOR_CHECK_SQUARE  = (0xFF, 0x00, 0x00)
+COLOR_BORDER        = (0x0A, 0x06, 0x03)
+COLOR_OVERLAY_BG    = (0x00, 0x00, 0x00)
+COLOR_PROMO_BG      = (0xBB, 0x99, 0x66)
+COLOR_PROMO_BORDER  = (0x6B, 0x3F, 0x27)
+COLOR_LABEL         = (0xBB, 0x99, 0x66)
+
+# Alpha levels
+ALPHA_LEGAL_MOVE    = 120
+ALPHA_LEGAL_CAPTURE = 160
+ALPHA_HIGHLIGHT     = 160
+ALPHA_CHECK         = 180
+ALPHA_OVERLAY       = 180
+ALPHA_DRAG_PIECE    = 220
+
+# Animation / FX
+ANIMATION_DURATION = 0.18
+TREMOR_AMPLITUDE   = UNIT
+TREMOR_FREQUENCY   = 10.0
+PARTICLE_COUNT     = 18
+PARTICLE_SPEED_MIN = 1.5
+PARTICLE_SPEED_MAX = 5.0
+PARTICLE_LIFETIME  = 0.45
+PARTICLE_SIZE      = UNIT
+
+# Assets
+ASSET_PIECE_DIR = "assets/pieces"
+ASSET_AUDIO_DIR = "assets/audio"
+ASSET_FONT_PATH = "assets/font/font.png"
+
+PIECE_NAMES = {
+    Pawn: "pawn", Rook: "rook", Knight: "knight",
+    Bishop: "bishop", Queen: "queen", King: "king",
+}
+
+PROMOTION_CHOICES = ["queen", "rook", "bishop", "knight"]
+
+# Bitmap font sheet
+FONT_CHAR_WIDTH  = 6
+FONT_CHAR_HEIGHT = 8
+FONT_SCALE       = SCALE
+FONT_COLS        = 16
+
+TARGET_FPS = 60
