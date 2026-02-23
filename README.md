@@ -116,13 +116,13 @@ The codebase is split into two layers with a hard boundary between them.
 ```
 ┌─────────────────────────────────────┐
 │           GUI layer                 │
-│  main.py · gui.py · particles.py   │
-│  assets.py · font.py · constants.py│
+│  main.py · gui.py · particles.py    │
+│  assets.py · font.py · constants.py │
 └──────────────┬──────────────────────┘
                │  calls
 ┌──────────────▼──────────────────────┐
 │          Chess layer                │
-│   chess/engine.py · chess/pieces.py│
+│   chess/engine.py · chess/pieces.py │
 │   (no pygame imports)               │
 └─────────────────────────────────────┘
 ```
